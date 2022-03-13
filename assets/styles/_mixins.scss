@@ -1,0 +1,14 @@
+$defaultFlexBoxAlign: center;
+$defaultFlexBoxJustify: center;
+
+@mixin flexbox($align: $defaultFlexBoxAlign, $justify: $defaultFlexBoxJustify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin hidden() {
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+  }
