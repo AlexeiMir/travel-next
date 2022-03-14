@@ -1,5 +1,6 @@
 import type { GetStaticProps, NextPage } from 'next'
 import { Layout } from '../app/components'
+import SearchSection from '../app/components/elements/SearchSection'
 import { IPlace } from '../app/types/place'
 
 interface IHome {
@@ -7,7 +8,9 @@ interface IHome {
 }
 
 const Home: NextPage = () => {
-  return <Layout>Home page</Layout>
+  return <Layout>
+    <SearchSection />
+  </Layout>
 }
 
 export const getStaticProps: GetStaticProps = async () => {
