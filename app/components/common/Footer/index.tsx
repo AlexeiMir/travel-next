@@ -29,7 +29,8 @@ export const Footer: FC = () => {
         <footer className={styles.footer}>
             <nav>
                 {navItems.map(item => (
-                   <button
+					<button
+						key={item.link}
                    className={pathname === item.link ? styles.active : ''}
                    onClick={() => push(item.link)}
                    >
