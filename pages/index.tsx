@@ -1,7 +1,8 @@
 import type { GetStaticProps, NextPage } from 'next'
 import { Layout } from '../app/components'
 import SearchSection from '../app/components/elements/SearchSection'
-import { IPlace } from '../app/types/place'
+import { IPlace } from '../app/types/place';
+import styles from '../assets/styles/Home.module.scss';
 
 interface IHome {
   places: IPlace[]
@@ -9,7 +10,9 @@ interface IHome {
 
 const Home: NextPage = () => {
   return <Layout>
+    <div className={styles.home_container}>
     <SearchSection />
+    </div>
   </Layout>
 }
 
