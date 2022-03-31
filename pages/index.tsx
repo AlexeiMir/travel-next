@@ -6,30 +6,45 @@ import HeadingSection from '../app/components/elements/HeadingSection';
 
 import { IPlace } from '../app/types/place';
 import styles from '../assets/styles/Home.module.scss';
+import { API_URL } from 'app/constants';
+import { useState } from 'react';
+import PopularPlaces from 'app/components/elements/PopularPlaces';
 
 interface IHome {
-  places: IPlace[];
+  initialPlaces: IPlace[];
 }
 
-const Home: NextPage = () => {
+const Home: NextPage<IHome> = ({initialPlaces}) => {
+  const [places, setPlaces] = useState(initialPlaces);
+  console.log('places', places);
+  
+  const [isLoading, setIsLoading] = useState(false);
   return (
     <Layout>
       <HeadingSection />
       <div className={styles.home_container}>
-        <Search />
-        <Filters />
+        <Search
+        initialPlaces={initialPlaces}
+        setPlaces={setPlaces}
+        setIsLoading={setIsLoading}
+        />
+        <Filters 
+        initialPlaces={initialPlaces}
+        setPlaces={setPlaces}
+        />
+        <PopularPlaces places={places} isLoading={isLoading} />
       </div>
     </Layout>
   );
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const result = await fetch('http://localhost:3000/api/places');
-  const places = await result.json();
+  const result = await fetch(`${API_URL}/places`);
+  const initialPlaces = await result.json();
 
   return {
     props: {
-      places,
+      initialPlaces,
     },
   };
 };

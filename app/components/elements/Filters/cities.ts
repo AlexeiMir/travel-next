@@ -1,8 +1,8 @@
-export enum CitiesType {
-    Paris = "Paris",
-    Bora = "Bora Bora",
-    Maui = "Maui",
-    Tahiti = "Tahiti",
-    Brazil = "Brazil",
+export enum CountriesType {
+    France = "France",
+    Japan = "Japan",
     Norway = "Norway",
+    Italy = "Italy",
+    Brazil = "Brazil",
+    USA = "USA",
 }

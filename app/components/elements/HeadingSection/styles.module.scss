@@ -1,8 +1,8 @@
 @import 'assets/styles/variables';
 @import 'assets/styles/mixins';
 
-.search_container {
-  @include flexbox(center, center);
+.heading_container {
+  @include flexbox();
 
   flex-direction: column;
   background-size: cover;

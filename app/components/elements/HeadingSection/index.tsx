@@ -1,12 +1,10 @@
 import React, { FC } from 'react';
 import mapImg from '../../../../assets/images/map.png';
-import { Filters } from '../Filters';
-import Search from '../Search';
 import styles from './styles.module.scss';
 
 const HeadingSection: FC = () => (
   <section
-    className={styles.search_container}
+    className={styles.heading_container}
     style={{ backgroundImage: `url('${mapImg.src}')` }}
   >
     <div>

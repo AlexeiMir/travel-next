@@ -2,7 +2,7 @@
 @import 'assets/styles/mixins';
 
 .search_container {
-    @include flexbox(center, center);
+    @include flexbox( center ,flex-start);
 
     background-color: rgba(255, 255, 255, 0.06);
     border: 1px solid transparent;
@@ -29,9 +29,9 @@
         outline: none;
         font-size: 15px;
 		color: $white;
-    }
 
-    &::placeholder {
-        color: #515054;
+        &::placeholder {
+            color: #515054;
+        }
     }
 }
