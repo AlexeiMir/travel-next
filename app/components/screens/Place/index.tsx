@@ -1,7 +1,7 @@
 import { Layout } from 'app/components/common/Layout'
 import React, { FC } from 'react'
 import { IPlace } from 'app/types/place';
-import { BookTrip } from 'app/components/screens'
+import { BookTrip, PlaceInformation } from 'app/components/screens'
 
 interface IPlacePage {
 	place: IPlace
@@ -10,6 +10,7 @@ interface IPlacePage {
 const Place: FC<IPlacePage> = ({ place }) => {
 	return (
 		<Layout>
+            <PlaceInformation place={place} />
 			<BookTrip />
 		</Layout>
 	)
