@@ -1,15 +1,15 @@
+import Place from 'app/components/screens/Place';
 import { API_URL } from 'app/constants';
 import { IPlace } from 'app/types/place';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import React, { FC } from 'react';
-import { Layout } from '../../app/components';
 
 interface PlaceProps {
     place: IPlace
 }
 
-const Place: FC<PlaceProps> = ({ place }) => {
-    return <Layout>Place { place.slug }</Layout>
+const PlacePage: FC<PlaceProps> = ({ place }) => {
+    return <Place place={place} />
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -30,4 +30,4 @@ const place = await res.json();
 return {props: { place }}
 }
 
-export default Place;
+export default PlacePage;

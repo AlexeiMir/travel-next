@@ -1,0 +1,35 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
+.button {
+    @include flexbox();
+	font-size: 15px;
+	background-color: $accent;
+	border: none;
+	outline: none;
+	border-radius: 30px;
+	box-shadow: 0 3px 6px rgba($accent, 0.4);
+	padding: 7px 7px 7px 24px;
+	transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+
+    &:hover {
+        background-color: lighten($accent, 4%);
+        box-shadow: 0 3px 6px rgba($accent,0.6);
+    }
+
+    .text {
+		color: $white;
+		margin: 0 20px 0 0 ;
+		font-weight: 500;
+	}
+
+	.icon {
+        @include flexbox();
+
+		background-color: $white;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+	}
+}
+
