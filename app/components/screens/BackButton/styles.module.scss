@@ -1,0 +1,10 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
+.button_container {
+    @include flexbox();
+    border-radius: 50%;
+		width: 55px;
+		height: 55px;
+		background-color: rgba(255, 255, 255, 0.05);
+}
