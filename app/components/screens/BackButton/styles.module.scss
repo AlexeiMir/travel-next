@@ -3,6 +3,8 @@
 
 .button_container {
     @include flexbox();
+	@include glassEffect;
+	
     border-radius: 50%;
 		width: 55px;
 		height: 55px;

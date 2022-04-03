@@ -26,6 +26,6 @@ export const PlaceInformation: FC<{ place: IPlace }> = ({place}) => (
         </div>
     </div>
 
-    <PlaceMap />
+    <PlaceMap location={place.location} />
 </div>
 )

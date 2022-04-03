@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import cx from 'classnames';
 import styles from './styles.module.scss';
-import { IPlace } from '../../../types/place';
+import { IPlace } from 'app/types/place';
 import Link from 'next/link';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'

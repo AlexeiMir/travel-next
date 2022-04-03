@@ -4,3 +4,4 @@ export {PlaceMap} from './PlaceMap';
 export {BackButton} from './BackButton';
 export {Favorites} from './Favorities';
 export {Header} from './Header';
+export {Wrapper} from './Wrapper';

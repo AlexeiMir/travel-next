@@ -1,11 +1,12 @@
 import React, { FC } from 'react';
-import { Footer } from '../Footer';
+import cn from 'classnames';
+import { Footer } from 'app/components/common/Footer';
 
 import styles from './styles.module.scss';
 
-const Layout: FC = ({ children }) => (
+const Layout: FC<{isMaxWidth: boolean}> = ({ children, isMaxWidth }) => (
     <div>
-    <div className={styles.layout_container}>
+    <div className={cn(styles.layout_container, {[styles.layout_container_width]: isMaxWidth})}>
         {children}
         <Footer />
     </div>

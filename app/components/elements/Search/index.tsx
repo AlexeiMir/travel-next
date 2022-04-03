@@ -1,7 +1,7 @@
 import { TypeSetState } from 'app/types/common';
 import { IPlace } from 'app/types/place';
 import React, { ChangeEvent, FC, useCallback, useState } from 'react';
-import { IconsTypes } from '../../../types/icons';
+import { IconsTypes } from 'app/types/icons';
 import styles from './styles.module.scss';
 
 interface SearchProps {

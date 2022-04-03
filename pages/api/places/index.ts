@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { IPlace } from '../../../app/types/place'
+import { IPlace } from 'app/types/place'
 
 export const places: IPlace[] = [
 	{

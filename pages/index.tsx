@@ -1,11 +1,11 @@
 import type { GetStaticProps, NextPage } from 'next';
-import { Layout } from '../app/components';
-import { Filters } from '../app/components/elements/Filters';
-import Search from '../app/components/elements/Search';
-import HeadingSection from '../app/components/elements/HeadingSection';
+import { Layout } from 'app/components';
+import { Filters } from 'app/components/elements/Filters';
+import Search from 'app/components/elements/Search';
+import HeadingSection from 'app/components/elements/HeadingSection';
 
-import { IPlace } from '../app/types/place';
-import styles from '../assets/styles/Home.module.scss';
+import { IPlace } from 'app/types/place';
+import styles from 'assets/styles/Home.module.scss';
 import { API_URL } from 'app/constants';
 import { useState } from 'react';
 import PopularPlaces from 'app/components/elements/PopularPlaces';
@@ -20,7 +20,7 @@ const Home: NextPage<IHome> = ({initialPlaces}) => {
   
   const [isLoading, setIsLoading] = useState(false);
   return (
-    <Layout>
+    <Layout  isMaxWidth={false}>
       <HeadingSection />
       <div className={styles.home_container}>
         <Search

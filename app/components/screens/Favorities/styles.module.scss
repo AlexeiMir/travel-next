@@ -3,6 +3,8 @@
 
 .icon_container {
     @include flexbox();
+	@include glassEffect;
+
     border-radius: 50%;
 		width: 55px;
 		height: 55px;
@@ -22,6 +24,8 @@
     }
 
 	.favorities_list_active {
+		@include glassEffect;
+
 		visibility: visible;
 		opacity: 1;
         background-color: #222223;
